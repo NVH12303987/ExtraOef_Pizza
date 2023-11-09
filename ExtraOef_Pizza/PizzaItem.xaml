@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="ExtraOef_Pizza.PizzaItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExtraOef_Pizza"
+             mc:Ignorable="d"
+             Width="auto">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Column="0">
+            <Button Margin="5" x:Name="btnminpizza" Width="20" Content="-" Click="DecreaseSliderValue"/>
+            <TextBox Margin="5" Text="{Binding SliderValue, Mode=TwoWay}" x:Name="txtpizza" Width="20"/>
+            <Button Margin="5" x:Name="btnpluspizza" Width="20" Content="+" Click="IncreaseSliderValue"/>
+            <Label x:Name="lblpizza" Width="160" Content="{Binding Pizzaname}" ToolTip="{Binding SliderValue}"/>
+        </StackPanel>
+        <Slider x:Name="sldpizza" Grid.Column="1" Minimum="0" Maximum="10" TickFrequency="1" 
+                TickPlacement="Both" SmallChange="1" AutoToolTipPlacement="TopLeft" MinWidth="50" 
+                Value="{Binding SliderValue, Mode=TwoWay}"/>
+    </Grid>
+</UserControl>

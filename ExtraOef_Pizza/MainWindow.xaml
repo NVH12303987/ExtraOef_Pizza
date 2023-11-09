@@ -1,0 +1,153 @@
+﻿<Window x:Class="ExtraOef_Pizza.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExtraOef_Pizza"
+        mc:Ignorable="d"
+        
+        Title="MainWindow" MinHeight="500" MinWidth="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.RowSpan="3">
+            <Label Content="Pizza bij Bruno"/>
+            <Label Content="Naam:"/>
+            <TextBox Margin="10" x:Name="txtNaam"/>
+            <Label Content="Telefoonnummer:"/>
+            <TextBox Margin="10" x:Name="txtTel"/>
+            <Label Content="E-mail"/>
+            <TextBox Margin="10" x:Name="txtmail"/>
+            <Label Content="Adres"/>
+            <TextBox Margin="10" x:Name="txtAdres"/>
+            <Label Content="Woonplaats"/>
+            <TextBox Margin="10" x:Name="txtwoonplaats"/>
+            <Label Content="Postcode"/>
+            <TextBox Margin="10" x:Name="txtpostcode"/>
+        </StackPanel >
+        <Label Grid.Column="1" VerticalAlignment="Bottom" Content="Pizza:" FontSize="14"/>
+        <StackPanel Margin="20" Grid.Column="1" Grid.Row="1" >
+            <!--<Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <Button Margin="5" x:Name="btnminpizza1" Width="20" Content="-"/>
+                    <TextBox Margin="5"  x:Name="txtpizza1" Width="20"/>
+                    <Button Margin="5" x:Name="btnpluspizza1" Width="20" Content="+"/>
+                    <Label x:Name="lblpizza1" Width="100" Content="pizza1"/>
+                </StackPanel>
+                <Slider x:Name="sldpizza1" Grid.Column="1" Minimum="0" Maximum="10" TickFrequency="1" TickPlacement="Both" SmallChange="1" AutoToolTipPlacement="TopLeft" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <Button x:Name="btnminpizza2" Width="20" Content="-"/>
+                    <TextBox x:Name="txtpizza2" Width="30"/>
+                    <Button x:Name="btnpluspizza2" Width="20" Content="+"/>
+                    <Label x:Name="lblpizza2" Width="100" Content="pizza2"/>
+                </StackPanel>
+                <Slider x:Name="sldpizza2" Grid.Column="1" Minimum="0" Maximum="10" TickFrequency="1" TickPlacement="Both" SmallChange="1" AutoToolTipPlacement="TopLeft" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <Button x:Name="btnminpizza3" Width="20" Content="-"/>
+                    <TextBox x:Name="txtpizza3" Width="30"/>
+                    <Button x:Name="btnpluspizza3" Width="20" Content="+"/>
+                    <Label x:Name="lblpizza3" Width="100" Content="pizza3"/>
+                </StackPanel>
+                <Slider x:Name="sldpizza3" Grid.Column="1" Minimum="0" Maximum="10" TickFrequency="1" TickPlacement="Both" SmallChange="1" AutoToolTipPlacement="TopLeft" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <Button x:Name="btnminpizza4" Width="20" Content="-"/>
+                    <TextBox x:Name="txtpizza4" Width="30"/>
+                    <Button x:Name="btnpluspizza4" Width="20" Content="+"/>
+                    <Label x:Name="lblpizza4" Width="100" Content="pizza4"/>
+                </StackPanel>
+                <Slider x:Name="sldpizza4" Grid.Column="1" Minimum="0" Maximum="10" TickFrequency="1" TickPlacement="Both" SmallChange="1" AutoToolTipPlacement="TopLeft" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <Button x:Name="btnminpizza5" Width="20" Content="-"/>
+                    <TextBox x:Name="txtpizza5" Width="30"/>
+                    <Button x:Name="btnpluspizza5" Width="20" Content="+"/>
+                    <Label x:Name="lblpizza5" Width="100" Content="pizza5"/>
+                </StackPanel>
+                <Slider x:Name="sldpizza5" Grid.Column="1" Minimum="0" Maximum="10" TickFrequency="1" TickPlacement="Both" SmallChange="1" AutoToolTipPlacement="TopLeft" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <Button x:Name="btnminpizza6" Width="20" Content="-"/>
+                    <TextBox x:Name="txtpizza6" Width="30"/>
+                    <Button x:Name="btnpluspizza6" Width="20" Content="+"/>
+                    <Label x:Name="lblpizza6" Width="100" Content="pizza6"/>
+                </StackPanel>
+                <Slider x:Name="sldpizza6" Grid.Column="1" Minimum="0" Maximum="10" TickFrequency="1" TickPlacement="Both" SmallChange="1" AutoToolTipPlacement="TopLeft" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <Button x:Name="btnminpizza7" Width="20" Content="-"/>
+                    <TextBox x:Name="txtpizza7" Width="30"/>
+                    <Button x:Name="btnpluspizza7" Width="20" Content="+"/>
+                    <Label x:Name="lblpizza7" Width="100" Content="pizza7"/>
+                </StackPanel>
+                <Slider x:Name="sldpizza7" Grid.Column="1" Minimum="0" Maximum="10" TickFrequency="1" TickPlacement="Both" SmallChange="1" AutoToolTipPlacement="TopLeft" />
+            </Grid>-->
+            <local:PizzaItem x:Name="Pizza1"/>
+            <local:PizzaItem x:Name="Pizza2"/>
+            <local:PizzaItem x:Name="Pizza3"/>
+            <local:PizzaItem x:Name="Pizza4"/>
+            <local:PizzaItem x:Name="Pizza5"/>
+            <local:PizzaItem x:Name="Pizza6"/>
+            <local:PizzaItem x:Name="Pizza7"/>
+            <Button x:Name="btnBestel" Content="Bestel Pizza's" Margin="10" Click="btnBestel_Click"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
+            <TextBlock x:Name="txtbill" Margin="10" TextWrapping="WrapWithOverflow">
+            onze pizza's zijn de <Bold>Beste!</Bold><LineBreak/>
+            Het is wetenschapelijk bewezen dat pizza's <Bold>goed</Bold> zijn voor de gezondheid.
+            </TextBlock>
+        </ScrollViewer>
+        <Image Grid.Column="2" Source="/Images/pizza1.jpg" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Grid.Column="2" VerticalAlignment="Bottom" Content="Toppings:" FontSize="14"/>
+        <StackPanel Margin="20" Grid.Column="2" Grid.Row="1">
+            <CheckBox Content="Extra Mozzarella (€ 0.50)"   Margin="5"/>
+            <CheckBox Content="Extra Salami (€ 0.50)"       Margin="5"/>
+            <CheckBox Content="Extra Anjovis (€ 0.50)"      Margin="5"/>
+            <CheckBox Content="Extra Artisjok (€ 0.50)"     Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
